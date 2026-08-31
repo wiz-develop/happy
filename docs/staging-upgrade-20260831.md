@@ -31,6 +31,7 @@
 
 - Kept Custom Field Suite and deployed the maintained `2.6.8-wiz.2` build. All 5 field groups, 157 fields, and 90 field names with stored values remain readable.
 - Reworked the child theme's legacy 3PR widget so it no longer extends a removed VK ExUnit class at file-load time. Existing widget ID, saved options, and frontend output are retained.
+- Kept Lightning 15.39.0 on its bundled legacy `Origin` skin because the Happy Family child theme uses Bootstrap 3 markup. The child theme now preserves the saved right-side menu button, uses Lightning's current one-column layout API, and suppresses Lightning's duplicate modern mobile navigation.
 - Patched Responsive Posts Carousel with capability checks, AJAX nonces, input sanitization, output escaping, and a PHP Notice fix. Existing `[wcp-carousel]` content remains in use on 24 published pages.
 - Removed unused or redundant code from staging: All-in-One WP Migration and its extension, MailPoet, Lightning Advanced Unit, Limit Login Attempts, Akismet, and Hello Dolly. Their original files and the complete source database remain in the local pre-change backup.
 - MailPoet was not used by published content and is absent from production. Its old tables remain in the staging database for rollback, but executable plugin code was removed to prevent accidental newsletter delivery.
@@ -41,6 +42,7 @@
 ## QA
 
 - Public HTTP 200: top, profile, supplement list, carousel product detail, contact, post detail, REST root, and `wp-cron.php`.
+- Layout structure was compared with the designated source on nine routes: top, product lists, product details, profile, contact, and news. One-column and two-column assignments now match the source, and the duplicate mobile navigation is absent.
 - No visible PHP Fatal, Warning, Deprecated, or Notice output on tested pages.
 - Contact Form 7 form 103 returned `mail_sent`; no external message left staging because the mail guard intercepted it.
 - Server-side loopback to the home page and REST API returned 200.
@@ -59,4 +61,3 @@ Machine-readable evidence is stored in `records/`.
 Chrome automation was unavailable because the Chrome browser extension was not connected. A final visual comparison at desktop and mobile widths, an authenticated admin edit/save check, and a mailbox delivery test to an approved QA address remain manual approval items.
 
 PHP 7.4.33 matches production as requested, but PHP 7.4 is end-of-life. WordPress Site Health therefore reports the PHP-version test as `critical` even though WordPress 7.1 and all active plugins can run on it. This platform risk remains until both production and staging can move to a supported PHP release.
-

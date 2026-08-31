@@ -59,7 +59,10 @@
 		<div class="row">
 
 			<?php
-			if ( lightning_is_frontpage_onecolumn() ) {
+			$frontpage_onecolumn = function_exists( 'lightning_is_layout_onecolumn' )
+				? lightning_is_layout_onecolumn()
+				: lightning_is_frontpage_onecolumn();
+			if ( $frontpage_onecolumn ) {
 				$main_col = 'col-md-12';
 			} else {
 				$main_col = 'col-md-8';
@@ -142,7 +145,7 @@
 
 			</div><!-- [ /.mainSection ] -->
 
-			<?php if ( ! lightning_is_frontpage_onecolumn() ) : ?>
+			<?php if ( ! $frontpage_onecolumn ) : ?>
 
 				<div class="col-md-3 col-md-offset-1 subSection sideSection">
 					<?php get_sidebar(); ?>

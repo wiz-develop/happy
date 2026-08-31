@@ -2,6 +2,33 @@
 require_once dirname( __FILE__ ) . '/extends-lightning/shortcuts.php';
 require_once dirname( __FILE__ ) . '/extends-lightning/widget-3pr-area.php';
 
+// This child theme uses the Bootstrap 3 markup provided by Lightning's Origin skin.
+function happyfamily_lightning_design_skin( $pre_option ) {
+    return 'origin';
+}
+add_filter( 'pre_option_lightning_design_skin', 'happyfamily_lightning_design_skin' );
+
+function happyfamily_menu_btn_position( $position ) {
+    $options = get_option( 'lightning_theme_options' );
+    if ( ! empty( $options['menu_btn_position'] ) && in_array( $options['menu_btn_position'], array( 'left', 'right' ), true ) ) {
+        return $options['menu_btn_position'];
+    }
+    return $position;
+}
+add_filter( 'lightning_menu_btn_position', 'happyfamily_menu_btn_position' );
+
+// The child header already provides its own mobile navigation.
+function happyfamily_remove_modern_mobile_nav() {
+    remove_action( 'lightning_footer_after', array( 'Vk_Mobile_Nav', 'menu_set_html' ) );
+    remove_action( 'wp_enqueue_scripts', array( 'Vk_Mobile_Nav', 'add_inline_css' ), 30 );
+
+    global $vk_mobile_nav;
+    if ( is_object( $vk_mobile_nav ) ) {
+        remove_filter( 'body_class', array( $vk_mobile_nav, 'add_body_class_mobile_device' ) );
+    }
+}
+add_action( 'after_setup_theme', 'happyfamily_remove_modern_mobile_nav', 100 );
+
 /*-------------------------------------------*/
 /*  フッターのウィジェットエリアの数を増やす
 /*-------------------------------------------*/
