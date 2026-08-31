@@ -1,10 +1,12 @@
-php_flag mbstring.encoding_translation Off
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+Options +SymLinksIfOwnerMatch
+
+#SITEGUARD_PLUGIN_SETTINGS_START
+#==== SITEGUARD_SG_WHITE_LIST_SETTINGS_START
+<IfModule mod_siteguard.c>
+        SiteGuard_User_ExcludeSig sqlinj-55
 </IfModule>
+#==== SITEGUARD_SG_WHITE_LIST_SETTINGS_END
+#SITEGUARD_PLUGIN_SETTINGS_END
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>

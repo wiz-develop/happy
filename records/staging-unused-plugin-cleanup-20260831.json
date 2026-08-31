@@ -1,0 +1,40 @@
+{
+    "ok": true,
+    "results": {
+        "akismet": {
+            "existed": true,
+            "removed": true,
+            "still_active": false
+        },
+        "all-in-one-wp-migration": {
+            "existed": true,
+            "removed": true,
+            "still_active": false
+        },
+        "all-in-one-wp-migration-file-extension": {
+            "existed": true,
+            "removed": true,
+            "still_active": false
+        },
+        "lightning-advanced-unit": {
+            "existed": true,
+            "removed": true,
+            "still_active": false
+        },
+        "limit-login-attempts": {
+            "existed": true,
+            "removed": true,
+            "still_active": false
+        },
+        "mailpoet": {
+            "existed": true,
+            "removed": true,
+            "still_active": false
+        },
+        "hello.php": {
+            "existed": true,
+            "removed": true,
+            "still_active": false
+        }
+    }
+}

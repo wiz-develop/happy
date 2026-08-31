@@ -1,0 +1,155 @@
+{
+    "php": "7.4.33",
+    "wordpress": "7.1",
+    "db_server": "8.4.8",
+    "db_prefix": "wp_",
+    "db_tables": 46,
+    "home_url": "https://happy.wiz-services.com/",
+    "site_url": "https://happy.wiz-services.com/",
+    "permalink_structure": "/%year%/%monthnum%/%day%/%postname%/",
+    "blog_public": "0",
+    "active_theme": "happyfamily",
+    "plugins": {
+        "classic-editor/classic-editor.php": {
+            "name": "Classic Editor",
+            "version": "1.7.0",
+            "active": true,
+            "requires_wp": "4.9",
+            "requires_php": "5.2.4"
+        },
+        "contact-form-7/wp-contact-form-7.php": {
+            "name": "Contact Form 7",
+            "version": "6.1.7",
+            "active": true,
+            "requires_wp": "6.7",
+            "requires_php": "7.4"
+        },
+        "custom-field-suite/cfs.php": {
+            "name": "Custom Field Suite",
+            "version": "2.6.8-wiz.2",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "duplicate-post/duplicate-post.php": {
+            "name": "Yoast Duplicate Post",
+            "version": "4.7",
+            "active": true,
+            "requires_wp": "6.8",
+            "requires_php": "7.4"
+        },
+        "responsive-posts-carousel/index.php": {
+            "name": "Responsive Posts Carousel",
+            "version": "4.1-wiz.1",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "siteguard/siteguard.php": {
+            "name": "SiteGuard WP Plugin",
+            "version": "1.8.9",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "tinymce-advanced/tinymce-advanced.php": {
+            "name": "Advanced Editor Tools",
+            "version": "5.10.1",
+            "active": true,
+            "requires_wp": "6.5",
+            "requires_php": "5.6"
+        },
+        "vk-all-in-one-expansion-unit/vkExUnit.php": {
+            "name": "VK All in One Expansion Unit",
+            "version": "9.123.0",
+            "active": true,
+            "requires_wp": "6.5",
+            "requires_php": "7.4"
+        },
+        "wp-multibyte-patch/wp-multibyte-patch.php": {
+            "name": "WP Multibyte Patch",
+            "version": "2.9.3",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "zipaddr-jp/zipaddr-jp.php": {
+            "name": "zipaddr-jp",
+            "version": "1.45",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        }
+    },
+    "themes": {
+        "happyfamily": {
+            "name": "Happy Family",
+            "version": "1.0.0",
+            "parent": "lightning",
+            "active": true
+        },
+        "lightning": {
+            "name": "Lightning",
+            "version": "15.39.0",
+            "parent": "",
+            "active": false
+        },
+        "twentyfifteen": {
+            "name": "Twenty Fifteen",
+            "version": "2.0",
+            "parent": "",
+            "active": false
+        },
+        "twentyfourteen": {
+            "name": "Twenty Fourteen",
+            "version": "2.2",
+            "parent": "",
+            "active": false
+        },
+        "twentynineteen": {
+            "name": "Twenty Nineteen",
+            "version": "1.4",
+            "parent": "",
+            "active": false
+        },
+        "twentyseventeen": {
+            "name": "Twenty Seventeen",
+            "version": "1.7",
+            "parent": "",
+            "active": false
+        },
+        "twentysixteen": {
+            "name": "Twenty Sixteen",
+            "version": "1.5",
+            "parent": "",
+            "active": false
+        },
+        "twentythirteen": {
+            "name": "Twenty Thirteen",
+            "version": "2.4",
+            "parent": "",
+            "active": false
+        }
+    },
+    "post_counts": {
+        "post": 4,
+        "page": 53,
+        "attachment": 0
+    },
+    "custom_field_suite": {
+        "available": true,
+        "groups": 5,
+        "fields": 157,
+        "fields_with_saved_values": 90
+    },
+    "contact_form_7": [
+        {
+            "id": 103,
+            "title": "お問い合わせ",
+            "recipient_configured": true,
+            "sender_configured": true,
+            "body_configured": true,
+            "autoresponder_active": false
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "ok": true,
+    "fallback": {
+        "installed": true,
+        "version": "1.5",
+        "install_error": null
+    },
+    "deleted": {
+        "twentyfifteen": true,
+        "twentyfourteen": true,
+        "twentynineteen": true,
+        "twentyseventeen": true,
+        "twentysixteen": true,
+        "twentythirteen": true
+    },
+    "active_theme": "happyfamily",
+    "parent_theme": "lightning"
+}

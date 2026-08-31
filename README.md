@@ -9,3 +9,5 @@ WordPress core, unmodified third-party plugins, database dumps, uploads, caches,
 
 See `docs/` for environment, QA, deployment, and rollback notes.
 
+The `test` branch represents the designated staging source after upgrade. It is not a production deployment bundle because the current production theme and content differ from the designated staging source.
+

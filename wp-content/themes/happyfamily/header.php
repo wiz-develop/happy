@@ -22,7 +22,7 @@ $lightning_theme_options = get_option( 'lightning_theme_options' );
 			<?php lightning_print_headlogo(); ?>
 			</span></a>
 			</h1>
-			<a href="https://www.happyfamily.co.jp/happymembers/login/" target="_blank">
+			<a href="http://happyfamily-members.3d-showcase.net/login" target="_blank">
 				<div class="mypage-link">
 					<span>会員専用サイト</span>
 					<div class="mypage-link__icon">
@@ -60,10 +60,10 @@ $lightning_theme_options = get_option( 'lightning_theme_options' );
 		</div>
 		<div>
 			<div class="mypage-link__sp">
-				<a href="https://www.happyfamily.co.jp/happymembers/login/" target="_blank">
+				<a href="http://happyfamily-members.3d-showcase.net/login" target="_blank">
 					<div class="mypage-link">
 						<div class="mypage-link__icon">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/asset/images/common/login-icon.png">
+							<img src="/wp-content/themes/happyfamily/asset/images/common/login-icon.png">
 						</div>
 						<span>会員専用サイト</span>
 					</div>
@@ -79,15 +79,5 @@ $lightning_theme_options = get_option( 'lightning_theme_options' );
 		</div>
 	</div>
 	<?php do_action( 'lightning_header_append' ); ?>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7T37M74GB0"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	gtag('config', 'G-7T37M74GB0');
-	gtag('config', 'UA-211763967-1');
-	</script>
 </header>
 <?php do_action( 'lightning_header_after' ); ?>

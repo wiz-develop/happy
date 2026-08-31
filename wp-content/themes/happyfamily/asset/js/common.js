@@ -36,8 +36,8 @@ jQuery(function($){
     slidesToScroll: 1,
     lazyLoad: 'ondemand',
     asNavFor: '.slick-product_sub',
-    prevArrow: '<button type="button" class="prev-btn"><img class="link-arrow rotate-90" src="/wordpress/wp-content/themes/happyfamily/asset/images/common/link-arrow_black.png"></button>',
-    nextArrow: '<button type="button" class="next-btn"><img class="link-arrow" src="/wordpress/wp-content/themes/happyfamily/asset/images/common/link-arrow_black.png"></button>',
+    prevArrow: '<button type="button" class="prev-btn"><img class="link-arrow rotate-90" src="/wp-content/themes/happyfamily/asset/images/common/link-arrow_black.png"></button>',
+    nextArrow: '<button type="button" class="next-btn"><img class="link-arrow" src="/wp-content/themes/happyfamily/asset/images/common/link-arrow_black.png"></button>',
   });
 
   $('.slick-product_sub').slick({

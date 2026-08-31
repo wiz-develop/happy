@@ -1,0 +1,31 @@
+{
+    "php": "7.4.33",
+    "wordpress": "7.1",
+    "loopback_home": {
+        "ok": true,
+        "status": 200,
+        "bytes": 57602
+    },
+    "loopback_rest": {
+        "ok": true,
+        "status": 200,
+        "bytes": 275093
+    },
+    "wordpress_org": {
+        "ok": true,
+        "status": 200,
+        "bytes": 13937
+    },
+    "cron": {
+        "disabled": false,
+        "events_before": 9,
+        "probe_scheduled": true,
+        "events_after_cleanup": 9
+    },
+    "custom_field_suite": {
+        "available": true,
+        "groups": 5,
+        "fields": 157,
+        "fields_with_saved_values": 90
+    }
+}

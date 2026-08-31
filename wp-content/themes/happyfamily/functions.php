@@ -29,7 +29,7 @@ add_action( 'wp_head', 'add_wp_head_custom',99);
 
 function add_wp_footer_custom(){ ?>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/asset/js/common.js?<?php echo date("ymdHis",filemtime( get_stylesheet_directory_uri()."/asset/js/common.js")); ?>"></script>
+    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/asset/js/common.js"></script>
 <?php }
 add_action( 'wp_footer', 'add_wp_footer_custom', 99);
 

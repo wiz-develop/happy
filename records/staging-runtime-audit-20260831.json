@@ -1,0 +1,58 @@
+{
+    "php": "7.4.33",
+    "wordpress": "7.1",
+    "wp_cron_disabled": true,
+    "active_plugins": [
+        "classic-editor/classic-editor.php",
+        "contact-form-7/wp-contact-form-7.php",
+        "custom-field-suite/cfs.php",
+        "duplicate-post/duplicate-post.php",
+        "siteguard/siteguard.php",
+        "tinymce-advanced/tinymce-advanced.php",
+        "vk-all-in-one-expansion-unit/vkExUnit.php",
+        "wp-multibyte-patch/wp-multibyte-patch.php",
+        "zipaddr-jp/zipaddr-jp.php"
+    ],
+    "post_shortcode_usage": {
+        "mailpoet_form": 0,
+        "responsive_posts_carousel": 0,
+        "wcp_carousel": 534
+    },
+    "cron_relevant_hooks": {
+        "siteguard_update_check": 1,
+        "wp_update_comment_type_batch": 1,
+        "wp_update_plugins": 1,
+        "wp_update_themes": 1,
+        "wp_version_check": 1
+    },
+    "mailpoet": {
+        "plugin_active": false,
+        "table_count": 30,
+        "scheduled_task_statuses": {
+            "": 1,
+            "completed": 305,
+            "scheduled": 3
+        },
+        "scheduled_task_types": {
+            "beamer": 98,
+            "export_files_cleanup": 78,
+            "inactive_subscribers": 77,
+            "migration": 1,
+            "sending": 1,
+            "stats_notification": 1,
+            "stats_notification_automated_emails": 50,
+            "subscriber_link_tokens": 2,
+            "unsubscribe_tokens": 1
+        },
+        "newsletter_statuses": {
+            "sent": 1
+        },
+        "subscriber_statuses": {
+            "subscribed": 1,
+            "unconfirmed": 2
+        },
+        "option_names": [
+            "widget_mailpoet_form"
+        ]
+    }
+}
