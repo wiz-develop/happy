@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-08-31",
+  "target": "https://happy.wiz-services.com/",
+  "contact_form_id": 103,
+  "backup_before_change": {
+    "path": "work/happy-migration/backups/20260831/staging-pre-mail/staging-pre-mail.sql.gz",
+    "sha256": "f2aadf40554d3622b961a2812dbaf56ebace0018bf13c3e234d9fad7a0e5a6d4"
+  },
+  "root_cause": "The staging MU mail guard returned success from pre_wp_mail without sending the message.",
+  "blocked_attempts_found_in_archived_log": 2,
+  "archived_log": "work/happy-migration/records/staging-debug-after-mail-20260831.log",
+  "changes": {
+    "staging_mail_guard_removed": true,
+    "notification_recipient_changed": false,
+    "before_sender": "[your-name] <contact@happyfamily.co.jp>",
+    "after_sender": "ハッピーファミリー <wordpress@happy.wiz-services.com>"
+  },
+  "probe": {
+    "recipient": "bs-dept@wiznet.co.jp",
+    "wp_mail_accepted": true,
+    "wp_mail_failed_errors": [],
+    "sendmail_path": "/usr/sbin/sendmail -t -i",
+    "customer_recipient_tested": false
+  },
+  "temporary_php_scripts_remaining": 0,
+  "runtime_debug_or_error_log_present_after_cleanup": false,
+  "manual_check": "Confirm receipt of the accepted diagnostic message in the target mailbox."
+}

@@ -13,7 +13,7 @@ After staging approval, create a production release from `main` and port only th
 3. Create a release branch from `main` and commit the fresh production baseline if it changed.
 4. Apply WordPress core, official plugin, CFS, carousel, and child-theme compatibility changes one at a time.
 5. Keep production-only theme templates, assets, content, URLs, and mail recipients unchanged.
-6. Do not deploy `happy-staging-mail-guard.php` to production.
+6. Confirm that no staging-only mail guard or staging sender override is included in the production release.
 7. Run database upgrade, clear caches, and verify public pages, REST, loopback, Cron, and the admin screens.
 8. Test contact delivery only with an approved recipient and verify both the configured administrative notification and any intentionally enabled autoresponder.
 9. Inspect PHP, WordPress, and server logs for Fatal, Warning, Deprecated, and Notice entries.
@@ -28,4 +28,3 @@ After staging approval, create a production release from `main` and port only th
 5. Clear opcode, page, object, and CDN caches.
 6. Verify the home page, representative pages, admin login, REST, Cron, and contact form.
 7. Remove any temporary maintenance or recovery scripts and record the incident.
-
