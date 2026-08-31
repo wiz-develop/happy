@@ -2,6 +2,62 @@
 require_once dirname( __FILE__ ) . '/extends-lightning/shortcuts.php';
 require_once dirname( __FILE__ ) . '/extends-lightning/widget-3pr-area.php';
 
+// This child theme uses the Bootstrap 3 markup provided by Lightning's Origin skin.
+function happyfamily_lightning_design_skin( $pre_option ) {
+    return 'origin';
+}
+add_filter( 'pre_option_lightning_design_skin', 'happyfamily_lightning_design_skin' );
+
+function happyfamily_menu_btn_position( $position ) {
+    $options = get_option( 'lightning_theme_options' );
+    if ( ! empty( $options['menu_btn_position'] ) && in_array( $options['menu_btn_position'], array( 'left', 'right' ), true ) ) {
+        return $options['menu_btn_position'];
+    }
+    return $position;
+}
+add_filter( 'lightning_menu_btn_position', 'happyfamily_menu_btn_position' );
+
+// The child header already provides its own mobile navigation.
+function happyfamily_remove_modern_mobile_nav() {
+    remove_action( 'lightning_footer_after', array( 'Vk_Mobile_Nav', 'menu_set_html' ) );
+    remove_action( 'wp_enqueue_scripts', array( 'Vk_Mobile_Nav', 'add_inline_css' ), 30 );
+
+    global $vk_mobile_nav;
+    if ( is_object( $vk_mobile_nav ) ) {
+        remove_filter( 'body_class', array( $vk_mobile_nav, 'add_body_class_mobile_device' ) );
+    }
+}
+add_action( 'after_setup_theme', 'happyfamily_remove_modern_mobile_nav', 100 );
+
+// Keep legacy VK ExUnit post-list widget settings compatible with current releases.
+function happyfamily_migrate_vkexunit_post_list_options() {
+    $widgets = get_option( 'widget_vkexunit_post_list' );
+    if ( ! is_array( $widgets ) ) {
+        return;
+    }
+
+    $changed = false;
+    foreach ( $widgets as $number => &$instance ) {
+        if ( '_multiwidget' === (string) $number || ! is_array( $instance ) ) {
+            continue;
+        }
+        if ( empty( $instance['title'] ) && ! empty( $instance['label'] ) ) {
+            $instance['title'] = $instance['label'];
+            $changed = true;
+        }
+        if ( isset( $instance['post_type'] ) && ! is_array( $instance['post_type'] ) ) {
+            $instance['post_type'] = array( $instance['post_type'] );
+            $changed = true;
+        }
+    }
+    unset( $instance );
+
+    if ( $changed ) {
+        update_option( 'widget_vkexunit_post_list', $widgets );
+    }
+}
+add_action( 'init', 'happyfamily_migrate_vkexunit_post_list_options', 5 );
+
 /*-------------------------------------------*/
 /*  フッターのウィジェットエリアの数を増やす
 /*-------------------------------------------*/
@@ -29,7 +85,7 @@ add_action( 'wp_head', 'add_wp_head_custom',99);
 
 function add_wp_footer_custom(){ ?>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/asset/js/common.js?<?php echo date("ymdHis",filemtime( get_stylesheet_directory_uri()."/asset/js/common.js")); ?>"></script>
+    <script type="text/javascript" src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/asset/js/common.js?ver=<?php echo esc_attr( (string) filemtime( get_stylesheet_directory() . '/asset/js/common.js' ) ); ?>"></script>
 <?php }
 add_action( 'wp_footer', 'add_wp_footer_custom', 99);
 

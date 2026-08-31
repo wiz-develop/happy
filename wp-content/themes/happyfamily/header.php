@@ -22,7 +22,7 @@ $lightning_theme_options = get_option( 'lightning_theme_options' );
 			<?php lightning_print_headlogo(); ?>
 			</span></a>
 			</h1>
-			<a href="https://www.happyfamily.co.jp/happymembers/login/" target="_blank">
+			<a href="https://www.happyfamily.co.jp/happymembers/login/" target="_blank" rel="noopener">
 				<div class="mypage-link">
 					<span>会員専用サイト</span>
 					<div class="mypage-link__icon">
@@ -60,10 +60,10 @@ $lightning_theme_options = get_option( 'lightning_theme_options' );
 		</div>
 		<div>
 			<div class="mypage-link__sp">
-				<a href="https://www.happyfamily.co.jp/happymembers/login/" target="_blank">
+				<a href="https://www.happyfamily.co.jp/happymembers/login/" target="_blank" rel="noopener">
 					<div class="mypage-link">
 						<div class="mypage-link__icon">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/asset/images/common/login-icon.png">
+							<img src="<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/asset/images/common/login-icon.png">
 						</div>
 						<span>会員専用サイト</span>
 					</div>

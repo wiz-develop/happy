@@ -1,0 +1,58 @@
+{
+  "environment": "production",
+  "url": "https://www.happyfamily.co.jp/",
+  "deployed_at": "2026-09-01",
+  "php": "7.4.33",
+  "wordpress": {
+    "before": "4.9.26",
+    "after": "7.1",
+    "update_status": "latest"
+  },
+  "theme": {
+    "active": "happyfamily",
+    "parent": "lightning",
+    "parent_before": "5.1.2",
+    "parent_after": "15.39.1"
+  },
+  "plugins_after": {
+    "classic-editor/classic-editor.php": "1.7.0",
+    "contact-form-7/wp-contact-form-7.php": "6.1.7",
+    "custom-field-suite/cfs.php": "2.6.8-wiz.2",
+    "duplicate-post/duplicate-post.php": "4.7",
+    "responsive-posts-carousel/index.php": "4.1-wiz.1",
+    "search-regex/search-regex.php": "3.4.4",
+    "siteguard/siteguard.php": "1.8.9",
+    "tinymce-advanced/tinymce-advanced.php": "5.10.1",
+    "vk-all-in-one-expansion-unit/vkExUnit.php": "9.123.0",
+    "wp-multibyte-patch/wp-multibyte-patch.php": "2.9.3",
+    "zipaddr-jp/zipaddr-jp.php": "1.45"
+  },
+  "custom_field_suite": {
+    "groups": 5,
+    "fields": 157,
+    "field_names_with_saved_values": 90
+  },
+  "site_health": {
+    "wordpress_org": "good",
+    "scheduled_events": "good",
+    "loopback_requests": "good",
+    "http_requests": "good",
+    "rest_api": "good",
+    "php_version": "critical_eol"
+  },
+  "qa": {
+    "public_pages": "pass",
+    "submenu_destinations": "26_of_26_http_200",
+    "assets": "49_of_49_http_200",
+    "wp_cron": "pass",
+    "fresh_php_log_errors": 0,
+    "contact_form_display": "pass",
+    "contact_form_submission": "not_run_by_request"
+  },
+  "backup": {
+    "database_sha256": "c27f90ee7d242cbee81956a008278c6439c81b5b7e8bc4418947723b18234aff",
+    "file_manifest_sha256": "3439cabd55eedb1d3254b4482cee0456474f759d0052a8788c3bf2bd37ea1bc5",
+    "wordpress_htaccess_sha256": "1b5bec28c2316a7dfb4ef28581c9e06a14a29081ddb7e52b92182413e2b0a45b"
+  },
+  "temporary_server_files_remaining": 0
+}

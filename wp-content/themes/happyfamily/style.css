@@ -272,6 +272,20 @@ h3:after, .subSection-title:after {
     font-size: clamp(1.1rem, 0.68vw, 1.4rem);
     line-height: 1.2;
   }
+  .siteHeadContainer ul.gMenu > li {
+    position: relative;
+  }
+  .siteHeadContainer ul.gMenu > li > ul.sub-menu {
+    top: 100%;
+    margin-top: 0;
+  }
+  .siteHeadContainer ul.gMenu > li:hover > ul.sub-menu,
+  .siteHeadContainer ul.gMenu > li:focus-within > ul.sub-menu {
+    display: block;
+    opacity: 1;
+    max-height: none;
+    overflow: visible;
+  }
 }
 @media (max-width: 1280px) and (min-width: 1101px) {
   .siteHeadContainer {
@@ -1260,13 +1274,29 @@ footer .footerMenu li:last-child a {
   text-align: center;
 }
 
+.wpcf7-form .form-submit > p {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding-top: 2em;
+}
+
 .wpcf7-form .wpcf7-submit {
+  display: block;
   background-color: transparent;
   border-radius: 0;
   color: #666;
   border: 3px solid #666;
-  margin-top: 2em;
+  margin: 0 auto;
   width: 50%;
+}
+
+.wpcf7-form .form-submit .wpcf7-spinner {
+  position: absolute;
+  left: calc(75% + 12px);
+  margin: 0;
 }
 
 .faq_flex {
