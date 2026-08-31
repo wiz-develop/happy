@@ -148,7 +148,8 @@ class WP_Widget_vkExUnit_3PR_areaEx extends WP_Widget {
 add_action(
 	'widgets_init',
 	function () {
+		unregister_widget( 'WP_Widget_vkExUnit_3PR_area' );
 		register_widget( 'WP_Widget_vkExUnit_3PR_areaEx' );
 	},
-	100
+	20
 );

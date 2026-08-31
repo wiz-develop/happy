@@ -29,6 +29,35 @@ function happyfamily_remove_modern_mobile_nav() {
 }
 add_action( 'after_setup_theme', 'happyfamily_remove_modern_mobile_nav', 100 );
 
+// Keep legacy VK ExUnit post-list widget settings compatible with current releases.
+function happyfamily_migrate_vkexunit_post_list_options() {
+    $widgets = get_option( 'widget_vkexunit_post_list' );
+    if ( ! is_array( $widgets ) ) {
+        return;
+    }
+
+    $changed = false;
+    foreach ( $widgets as $number => &$instance ) {
+        if ( '_multiwidget' === (string) $number || ! is_array( $instance ) ) {
+            continue;
+        }
+        if ( empty( $instance['title'] ) && ! empty( $instance['label'] ) ) {
+            $instance['title'] = $instance['label'];
+            $changed = true;
+        }
+        if ( isset( $instance['post_type'] ) && ! is_array( $instance['post_type'] ) ) {
+            $instance['post_type'] = array( $instance['post_type'] );
+            $changed = true;
+        }
+    }
+    unset( $instance );
+
+    if ( $changed ) {
+        update_option( 'widget_vkexunit_post_list', $widgets );
+    }
+}
+add_action( 'init', 'happyfamily_migrate_vkexunit_post_list_options', 5 );
+
 /*-------------------------------------------*/
 /*  フッターのウィジェットエリアの数を増やす
 /*-------------------------------------------*/

@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-08-31",
+  "target": "https://happy.wiz-services.com/",
+  "production_reference": "https://www.happyfamily.co.jp/",
+  "rollback_database": "work/happy-migration/backups/20260831/staging-final/staging-final.sql.gz",
+  "theme_files_changed": [
+    "wp-content/themes/happyfamily/functions.php",
+    "wp-content/themes/happyfamily/header.php",
+    "wp-content/themes/happyfamily/style.css",
+    "wp-content/themes/happyfamily/extends-lightning/widget-3pr-area.php"
+  ],
+  "database_changes": {
+    "home_page_id": 2,
+    "home_content_before_sha256": "377689959ef5b0ee8f62afa38a5d9906b189d6dc90826f4136e3b08006ec85bb",
+    "home_content_after_sha256": "b384e777f75b72fd5ab2edec3f674a941d485c4ca812a2d5760c7561b6a2bbd5",
+    "menu_item_ids_updated": [50, 82, 83, 84, 390, 391, 392],
+    "vkexunit_post_list_legacy_options_migrated": true
+  },
+  "file_restored_from_production_backup": {
+    "path": "wp-content/uploads/2021/11/mypage-bnr.jpg",
+    "sha256": "b6795cfda891dda16f348ff79a9be21d8143b55fa8e41ee7d01b98317706572f"
+  },
+  "qa": {
+    "production_and_staging_heading_sequence_equal": true,
+    "recent_posts_english_label_present": false,
+    "three_pr_read_more_present": false,
+    "contact_link_row_present": true,
+    "submenu_urls_checked": 26,
+    "submenu_url_failures": 0,
+    "key_routes_checked": 8,
+    "key_route_failures": 0,
+    "same_domain_assets_checked": 128,
+    "asset_failures": 0,
+    "visible_php_errors": 0,
+    "runtime_debug_or_error_log_present": false,
+    "temporary_php_scripts_remaining": 0
+  },
+  "manual_limit": "Chrome interaction automation was unavailable because the Codex Chrome extension was not connected."
+}

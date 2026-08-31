@@ -31,7 +31,11 @@
 
 - Kept Custom Field Suite and deployed the maintained `2.6.8-wiz.2` build. All 5 field groups, 157 fields, and 90 field names with stored values remain readable.
 - Reworked the child theme's legacy 3PR widget so it no longer extends a removed VK ExUnit class at file-load time. Existing widget ID, saved options, and frontend output are retained.
+- Registered the child 3PR widget before WordPress builds frontend widget callbacks, restoring the production image/title/summary order and removing the update-added `Read more` links.
+- Added a one-time-compatible VK ExUnit post-list option migration so the legacy `label` and scalar `post_type` values continue to render `新着情報` under current plugin releases.
 - Kept Lightning 15.39.0 on its bundled legacy `Origin` skin because the Happy Family child theme uses Bootstrap 3 markup. The child theme now preserves the saved right-side menu button, uses Lightning's current one-column layout API, and suppresses Lightning's duplicate modern mobile navigation.
+- Stabilized the desktop submenu hit area by anchoring it directly below each parent item and using the same visible state for hover and keyboard focus.
+- Aligned the staging top-page contact/link row and visible navigation labels/order with production. The one missing top-page member banner was restored from the production file backup and is served locally by staging.
 - Patched Responsive Posts Carousel with capability checks, AJAX nonces, input sanitization, output escaping, and a PHP Notice fix. Existing `[wcp-carousel]` content remains in use on 24 published pages.
 - Removed unused or redundant code from staging: All-in-One WP Migration and its extension, MailPoet, Lightning Advanced Unit, Limit Login Attempts, Akismet, and Hello Dolly. Their original files and the complete source database remain in the local pre-change backup.
 - MailPoet was not used by published content and is absent from production. Its old tables remain in the staging database for rollback, but executable plugin code was removed to prevent accidental newsletter delivery.
@@ -43,6 +47,8 @@
 
 - Public HTTP 200: top, profile, supplement list, carousel product detail, contact, post detail, REST root, and `wp-cron.php`.
 - Layout structure was compared with the designated source on nine routes: top, product lists, product details, profile, contact, and news. One-column and two-column assignments now match the source, and the duplicate mobile navigation is absent.
+- The final top-page headings and section order match production: two 3PR headings, `新着情報`, `お問い合わせ`, and `リンク`. The contact/link separator row is restored, and no `Recent Posts` or 3PR `Read more` output remains.
+- All 26 staging submenu destinations returned 200. The tested public asset set contained 128 same-domain URLs, all returning 200.
 - No visible PHP Fatal, Warning, Deprecated, or Notice output on tested pages.
 - Contact Form 7 form 103 returned `mail_sent`; no external message left staging because the mail guard intercepted it.
 - Server-side loopback to the home page and REST API returned 200.
