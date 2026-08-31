@@ -1,0 +1,205 @@
+{
+    "php": "7.0.32",
+    "wordpress": "5.2.21",
+    "db_server": "5.6.42",
+    "db_prefix": "wp_",
+    "db_tables": 46,
+    "home_url": "http://happyfamily.3d-showcase.net/",
+    "site_url": "http://happyfamily.3d-showcase.net/",
+    "permalink_structure": "/%year%/%monthnum%/%day%/%postname%/",
+    "blog_public": "0",
+    "active_theme": "happyfamily",
+    "plugins": {
+        "akismet/akismet.php": {
+            "name": "Akismet Anti-Spam",
+            "version": "4.0.8",
+            "active": false,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "all-in-one-wp-migration-file-extension/all-in-one-wp-migration-file-extension.php": {
+            "name": "All-in-One WP Migration File Extension",
+            "version": "1.5",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "all-in-one-wp-migration/all-in-one-wp-migration.php": {
+            "name": "All-in-One WP Migration",
+            "version": "7.6",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "classic-editor/classic-editor.php": {
+            "name": "Classic Editor",
+            "version": "1.5",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "contact-form-7/wp-contact-form-7.php": {
+            "name": "Contact Form 7",
+            "version": "5.0.3",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "custom-field-suite/cfs.php": {
+            "name": "Custom Field Suite",
+            "version": "2.6",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "duplicate-post/duplicate-post.php": {
+            "name": "Duplicate Post",
+            "version": "3.2.2",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "hello.php": {
+            "name": "Hello Dolly",
+            "version": "1.6",
+            "active": false,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "lightning-advanced-unit/lightning_advanced_unit.php": {
+            "name": "Lightning Advanced Unit",
+            "version": "3.3.3",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "limit-login-attempts/limit-login-attempts.php": {
+            "name": "Limit Login Attempts",
+            "version": "1.7.1",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "mailpoet/mailpoet.php": {
+            "name": "MailPoet 3 (New)",
+            "version": "3.40.0",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "responsive-posts-carousel/index.php": {
+            "name": "Responsive Posts Carousel",
+            "version": "4.1",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "siteguard/siteguard.php": {
+            "name": "SiteGuard WP Plugin",
+            "version": "1.5.0",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "tinymce-advanced/tinymce-advanced.php": {
+            "name": "TinyMCE Advanced",
+            "version": "4.8.0",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "vk-all-in-one-expansion-unit/vkExUnit.php": {
+            "name": "VK All in One Expansion Unit",
+            "version": "6.6.4",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "wp-multibyte-patch/wp-multibyte-patch.php": {
+            "name": "WP Multibyte Patch",
+            "version": "2.8.1",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        },
+        "zipaddr-jp/zipaddr-jp.php": {
+            "name": "zipaddr-jp",
+            "version": "1.22",
+            "active": true,
+            "requires_wp": "",
+            "requires_php": ""
+        }
+    },
+    "themes": {
+        "happyfamily": {
+            "name": "Happy Family",
+            "version": "1.0.0",
+            "parent": "lightning",
+            "active": true
+        },
+        "lightning": {
+            "name": "Lightning",
+            "version": "5.1.2",
+            "parent": "",
+            "active": false
+        },
+        "twentyfifteen": {
+            "name": "Twenty Fifteen",
+            "version": "2.0",
+            "parent": "",
+            "active": false
+        },
+        "twentyfourteen": {
+            "name": "Twenty Fourteen",
+            "version": "2.2",
+            "parent": "",
+            "active": false
+        },
+        "twentynineteen": {
+            "name": "Twenty Nineteen",
+            "version": "1.4",
+            "parent": "",
+            "active": false
+        },
+        "twentyseventeen": {
+            "name": "Twenty Seventeen",
+            "version": "1.7",
+            "parent": "",
+            "active": false
+        },
+        "twentysixteen": {
+            "name": "Twenty Sixteen",
+            "version": "1.5",
+            "parent": "",
+            "active": false
+        },
+        "twentythirteen": {
+            "name": "Twenty Thirteen",
+            "version": "2.4",
+            "parent": "",
+            "active": false
+        }
+    },
+    "post_counts": {
+        "post": 4,
+        "page": 53,
+        "attachment": 0,
+        "mailpoet_page": 1
+    },
+    "custom_field_suite": {
+        "available": true,
+        "groups": 5,
+        "fields": 157,
+        "fields_with_saved_values": 90
+    },
+    "contact_form_7": [
+        {
+            "id": 103,
+            "title": "お問い合わせ",
+            "recipient_configured": true,
+            "sender_configured": true,
+            "body_configured": true,
+            "autoresponder_active": false
+        }
+    ]
+}

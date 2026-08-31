@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+global $lightning_theme_options;
+$lightning_theme_options = get_option( 'lightning_theme_options' );
+?>
+<?php wp_head(); ?>
+
+</head>
+<body <?php body_class(); ?>>
+<?php do_action( 'lightning_header_before' ); ?>
+<header class="navbar siteHeader">
+	<?php do_action( 'lightning_header_prepend' ); ?>
+	<div class="mypage-link__pc">
+		<div class="container">
+			<h1 class="navbar-brand siteHeader_logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>
+			<?php lightning_print_headlogo(); ?>
+			</span></a>
+			</h1>
+			<a href="https://www.happyfamily.co.jp/happymembers/login/" target="_blank">
+				<div class="mypage-link">
+					<span>会員専用サイト</span>
+					<div class="mypage-link__icon">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/asset/images/common/login-icon.png">
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="container siteHeadContainer">
+		<div class="navbar-header">
+			<h1 class="navbar-brand siteHeader_logo">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>
+			<?php lightning_print_headlogo(); ?>
+			</span></a>
+			</h1>
+			<?php do_action( 'lightning_header_logo_after' ); ?>
+			<?php
+			$args  = array(
+				'theme_location' => 'Header',
+				'container'      => 'nav',
+				'items_wrap'     => '<ul id="%1$s" class="%2$s nav gMenu">%3$s</ul>',
+				'fallback_cb'    => '',
+				'echo'           => false,
+				'walker'         => new description_walker(),
+			);
+			$gMenu = wp_nav_menu( $args );
+			// メニューがセットされていたら実行
+			if ( $gMenu ) {
+				$menu_btn_position = 'left';
+				$menu_btn_position = apply_filters( 'lightning_menu_btn_position', $menu_btn_position );
+				?>
+			  <a href="#" class="btn btn-default menuBtn menuClose menuBtn_<?php echo esc_attr( $menu_btn_position ); ?>" id="menuBtn"><i class="fa fa-bars" aria-hidden="true"></i></a>
+			<?php } ?>
+		</div>
+		<div>
+			<div class="mypage-link__sp">
+				<a href="https://www.happyfamily.co.jp/happymembers/login/" target="_blank">
+					<div class="mypage-link">
+						<div class="mypage-link__icon">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/asset/images/common/login-icon.png">
+						</div>
+						<span>会員専用サイト</span>
+					</div>
+				</a>
+			</div>
+			<?php
+			if ( $gMenu ) {
+				echo '<div id="gMenu_outer" class="gMenu_outer">';
+				echo $gMenu;
+				echo '</div>';
+			}
+			?>
+		</div>
+	</div>
+	<?php do_action( 'lightning_header_append' ); ?>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7T37M74GB0"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-7T37M74GB0');
+	gtag('config', 'UA-211763967-1');
+	</script>
+</header>
+<?php do_action( 'lightning_header_after' ); ?>

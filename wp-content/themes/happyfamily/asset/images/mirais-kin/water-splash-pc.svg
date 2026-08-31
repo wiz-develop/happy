@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-label="">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8f7fb" stop-opacity=".92"/>
+      <stop offset=".52" stop-color="#b7d9e8" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#263c4d" stop-opacity=".16"/>
+    </linearGradient>
+    <filter id="blur" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="2.2"/>
+    </filter>
+  </defs>
+  <path fill="url(#g)" filter="url(#blur)" d="M812 76c66 84 60 213 14 305-46 93-134 150-233 179-100 29-211 29-317-12C169 507 67 425 45 318 24 211 84 79 193 39c110-40 269 12 378 17 109 4 175-63 241 20z"/>
+  <path fill="#fff" fill-opacity=".48" d="M742 102c44 49 34 143 4 209-38 84-130 130-219 144-104 16-214-14-295-78-76-60-117-151-90-223 29-78 131-103 229-88 101 16 173 74 252 73 50 0 86-31 119-37z"/>
+  <g fill="none" stroke="#fff" stroke-opacity=".68">
+    <path d="M232 212c92-78 243-81 356-18 83 47 129 121 117 190"/>
+    <path d="M176 303c80 90 235 128 378 92 90-23 164-76 197-141"/>
+  </g>
+</svg>
