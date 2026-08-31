@@ -1,0 +1,8 @@
+{
+  "path": "wordpress/wp-content/debug.log",
+  "remote_size": 8848218145,
+  "remote_modify_raw": "20260831063600",
+  "classification": "runtime-debug-log",
+  "included_in_active_source_backup": false,
+  "reason": "The log is runtime output, not deployable source. Its metadata is preserved and it is listed in the verified manifest's excluded entries."
+}

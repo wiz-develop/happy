@@ -47,7 +47,9 @@
 - Server-side request to `api.wordpress.org` returned 200.
 - WP-Cron accepted, stored, and removed a temporary scheduled event; Cron is enabled.
 - Standard SiteGuard-protected WordPress login page returned 200 and displayed its CAPTCHA.
-- Final debug log contains only the expected staging mail-block audit line and no PHP error signatures.
+- WordPress's own authenticated Site Health callbacks returned `good` for REST, loopback, scheduled events, outbound HTTP, and WordPress.org communication.
+- Core update status is `latest`; plugin and theme update candidate lists are empty.
+- After the final probes, WordPress did not create a debug log, meaning no new PHP error entry was emitted.
 - Public search-engine indexing is disabled on staging.
 
 Machine-readable evidence is stored in `records/`.
@@ -55,4 +57,6 @@ Machine-readable evidence is stored in `records/`.
 ## Remaining manual check
 
 Chrome automation was unavailable because the Chrome browser extension was not connected. A final visual comparison at desktop and mobile widths, an authenticated admin edit/save check, and a mailbox delivery test to an approved QA address remain manual approval items.
+
+PHP 7.4.33 matches production as requested, but PHP 7.4 is end-of-life. WordPress Site Health therefore reports the PHP-version test as `critical` even though WordPress 7.1 and all active plugins can run on it. This platform risk remains until both production and staging can move to a supported PHP release.
 

@@ -1,0 +1,45 @@
+{
+    "php": "7.4.33",
+    "wordpress": "7.1",
+    "admin_capabilities": {
+        "update_core": true,
+        "update_plugins": true,
+        "manage_options": true
+    },
+    "site_health": {
+        "php_version": {
+            "status": "critical",
+            "label": "Your site is running on an outdated version of PHP (7.4.33), which does not receive security updates and soon will not be supported by WordPress."
+        },
+        "dotorg_communication": {
+            "status": "good",
+            "label": "Can communicate with WordPress.org"
+        },
+        "scheduled_events": {
+            "status": "good",
+            "label": "Scheduled events are running"
+        },
+        "loopback_requests": {
+            "status": "good",
+            "label": "Your site can perform loopback requests"
+        },
+        "http_requests": {
+            "status": "good",
+            "label": "HTTP requests seem to be working as expected"
+        },
+        "rest_availability": {
+            "status": "good",
+            "label": "The REST API is available"
+        }
+    },
+    "updates": {
+        "core": [
+            {
+                "response": "latest",
+                "version": "7.1"
+            }
+        ],
+        "plugins": [],
+        "themes": []
+    }
+}

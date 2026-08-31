@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-08-31",
+  "debug_log_exists_after_final_probes": false,
+  "php_fatal": 0,
+  "php_warning": 0,
+  "php_deprecated": 0,
+  "php_notice": 0,
+  "note": "The pre-final log was archived outside Git, then removed. WordPress did not recreate it during final public, REST, Cron, form, update, and Site Health probes."
+}

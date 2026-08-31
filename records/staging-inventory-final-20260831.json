@@ -94,39 +94,9 @@
             "parent": "",
             "active": false
         },
-        "twentyfifteen": {
-            "name": "Twenty Fifteen",
-            "version": "2.0",
-            "parent": "",
-            "active": false
-        },
-        "twentyfourteen": {
-            "name": "Twenty Fourteen",
-            "version": "2.2",
-            "parent": "",
-            "active": false
-        },
-        "twentynineteen": {
-            "name": "Twenty Nineteen",
-            "version": "1.4",
-            "parent": "",
-            "active": false
-        },
-        "twentyseventeen": {
-            "name": "Twenty Seventeen",
-            "version": "1.7",
-            "parent": "",
-            "active": false
-        },
-        "twentysixteen": {
-            "name": "Twenty Sixteen",
+        "twentytwentyfive": {
+            "name": "Twenty Twenty-Five",
             "version": "1.5",
-            "parent": "",
-            "active": false
-        },
-        "twentythirteen": {
-            "name": "Twenty Thirteen",
-            "version": "2.4",
             "parent": "",
             "active": false
         }
